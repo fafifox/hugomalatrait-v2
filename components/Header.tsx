@@ -3,6 +3,11 @@ import React from "react";
 
 const navigation = [
     {
+        name: 'Twitter',
+        link: 'https://twitter.com/fafif0x',
+        isExternal: true
+    },
+    {
         name: 'Github',
         link: 'https://github.com/fafifox',
         isExternal: true
@@ -21,14 +26,14 @@ export const Header = () => {
                 <h1 className="text-white text-md font-bold uppercase">Hugo Malatrait</h1>
                 <div className="space-x-4">
                     { navigation.map((link, i) => (
-                    <Link href={link.link} key={`link-${i}`} className="text-white text-sm font-semibold uppercase hover:opacity-50 transition-opacity duration-300">
+                    <Link href={link.link} key={`link-${i}`} target={link.isExternal ? '_blank' : '_self'} className="text-white text-sm font-semibold uppercase hover:opacity-50 transition-opacity duration-300">
                         {link.name}
                     </Link>
                     ))
                     }
                 </div>
             </nav>
-            <section className="w-full h-[512px] relative flex items-center">
+            <section className="w-full h-screen relative flex items-center">
                 <h1 className="text-white text-opacity-40 text-4xl lg:text-6xl font-semibold lg:text-center mx-auto z-10 bg-clip-text bg-gradient-to-tl from-transparent to-white">
                     Helping companies build,
                     <br className="hidden lg:block" /> launch and refine their product
@@ -36,11 +41,11 @@ export const Header = () => {
                 <div
                     className="w-full h-full text-white bg-grid absolute"
                     style={{
-                        maskImage: "radial-gradient(circle at 50% 50%, #8C8CDB 0%, #8C8CDB00 90%)",
+                        maskImage: "radial-gradient(circle at 50% 50%, #8C8CDB 0%, #00000000 90%)",
                         WebkitMaskImage: "radial-gradient(circle at 50% 50%, #8C8CDB 0%, #00000000 50%)",
                     }}
                 ></div>
-                <div className="w-full h-[320px] header-gradient blur-[96px] rounded-[48px] absolute"></div>
+                <div className="w-full h-[320px] header-gradient blur-[128px] rounded-[48px] absolute"></div>
             </section>
         </header>
     );
