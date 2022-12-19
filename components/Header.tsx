@@ -38,7 +38,7 @@ export const Header = () => {
                     ))}
                 </div>
             </nav>
-            <section className="w-full h-[560px] md:h-screen relative flex items-center">
+            <section className="w-full h-[560px] lg:h-screen relative flex items-center">
                 <motion.h1
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -47,7 +47,7 @@ export const Header = () => {
                     delay: 0,
                     ease: "easeIn",
                 }}
-                className="text-white text-opacity-40 text-4xl lg:text-6xl font-semibold lg:text-center mx-auto z-10 bg-clip-text bg-gradient-to-tl from-transparent to-white"
+                className="text-white text-opacity-40 text-4xl lg:text-6xl font-semibold md:text-center mx-auto z-10 bg-clip-text bg-gradient-to-tl from-transparent to-white"
                 >
                     Helping companies build,
                     <br className="hidden lg:block" /> launch and refine their product

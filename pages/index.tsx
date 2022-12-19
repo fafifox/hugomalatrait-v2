@@ -79,7 +79,7 @@ export default function Home({ projects }: InferGetStaticPropsType<typeof getSta
                     >
                         Latest Projects
                     </motion.h2>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:gap-16 lg:gap-8 place-items-center">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 place-items-center">
                         {projects.map((project: any, i: number) => (
                             <ProjectCard key={`project-${i}`} image={project.image} title={project.title} description={project.description} />
                         ))}
