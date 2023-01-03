@@ -11,6 +11,7 @@ import illus_glq_marketplace from "../public/projects/illus_glq_marketplace.png"
 import illus_glq_interface from "../public/projects/illus_glq_interface.png";
 import illus_glq from "../public/projects/illus_glq.png";
 import illus_dr from "../public/projects/illus_dr.png";
+import { About } from "../components/About";
 
 export default function Home({ projects }: InferGetStaticPropsType<typeof getStaticProps>) {
     return (
@@ -27,59 +28,16 @@ export default function Home({ projects }: InferGetStaticPropsType<typeof getSta
                 <meta name="theme-color" content="#000212" />
             </Head>
 
-            <main className="container mx-auto max-w-sm md:max-w-3xl lg:max-w-6xl px-4 lg:px-0">
+            <main className="container max-w-sm px-4 mx-auto md:max-w-3xl lg:max-w-6xl lg:px-0">
                 <Header />
+                <About />
                 <section className="mt-8 mb-16 space-y-8">
-                    <motion.h2
-                        initial={{ opacity: 0 }}
-                        whileInView={{ opacity: 1 }}
-                        viewport={{ once: true }}
-                        transition={{
-                            duration: 0.5,
-                            delay: 0.3,
-                            ease: "easeIn",
-                        }}
-                        className="text-white text-4xl font-semibold"
-                    >
-                        Hello, I&apos;m Hugo Malatrait!
-                    </motion.h2>
-                    <motion.p
-                        initial={{ opacity: 0 }}
-                        whileInView={{ opacity: 1 }}
-                        viewport={{ once: true }}
-                        transition={{
-                            duration: 0.5,
-                            delay: 0.5,
-                            ease: "easeIn",
-                        }}
-                        className="text-lg text-white"
-                    >
-                        Designer, Developer, Founder — Jack-of-all-trade with a passion for creating technology-driven experiences.
-                        <br />
-                        <br />
-                        Experienced in web development, video game development, game design, network programming, cloud computing, blockchain, and
-                        decentralization.
-                        <br />
-                        <br />
-                        As a continual self-learner, I&apos;m always looking to expand my knowledge and skills. Whether working in a team or individually, I am
-                        committed to use my abilities to bring ideas to life and create meaningful solutions.
-                    </motion.p>
-                </section>
-                <section className="mt-8 mb-16 space-y-8">
-                    <motion.h2
-                        initial={{ opacity: 0 }}
-                        whileInView={{ opacity: 1 }}
-                        viewport={{ once: true }}
-                        transition={{
-                            duration: 0.5,
-                            delay: 0.3,
-                            ease: "easeIn",
-                        }}
-                        className="text-white text-4xl font-semibold"
+                    <h2
+                        className="text-4xl font-semibold text-white"
                     >
                         Latest Projects
-                    </motion.h2>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 place-items-center">
+                    </h2>
+                    <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 place-items-center">
                         {projects.map((project: any, i: number) => (
                             <ProjectCard key={`project-${i}`} image={project.image} title={project.title} description={project.description} />
                         ))}
@@ -134,7 +92,7 @@ export const getStaticProps: GetStaticProps<{ projects: Project[] }> = async () 
         {
             image: illus_dr,
             title: "Dofus Renderer",
-            description: `Built a rendering engine accessible over an API, allowing the customization and rendering of Dofus Retro characters (an MMORPG) on the web, used by fan sites and private servers.`,
+            description: `Built a rendering engine accessible over an API, allowing the customization and rendering of Dofus Retro characters on the web, used by fan sites and private servers.`,
         },
     ];
     return {

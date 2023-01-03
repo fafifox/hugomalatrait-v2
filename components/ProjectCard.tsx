@@ -19,14 +19,14 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ image, title, descript
                 delay: 0,
                 ease: "easeIn",
             }}
-            className="bg-[#7877C6] cursor-pointer backdrop-blur-sm bg-opacity-10 w-full h-[296px] rounded-[32px] border border-[#8C8CDB] border-opacity-50 flex flex-col hover:bg-opacity-20 duration-300 box-border overflow-hidden"
+            className="bg-[#7877C6] cursor-default backdrop-blur-sm bg-opacity-10 w-full h-[296px] rounded-[32px] border border-[#8C8CDB] border-opacity-50 flex flex-col hover:bg-opacity-20 duration-300 box-border overflow-hidden"
         >
-            <div className="h-1/2 w-full">
+            <div className="w-full h-1/2">
                 <Image src={image} width={640} height={280} quality={100} priority alt="" />
             </div>
-            <div className="h-1/2 px-4 text-white flex flex-col space-y-2">
-                <h3 className="font-semibold text-base">{title}</h3>
-                <p className="font-normal text-base text-justify">{description}</p>
+            <div className="flex flex-col px-4 space-y-2 text-white h-1/2">
+                <h3 className="text-base font-semibold">{title}</h3>
+                <p className="text-base font-normal text-justify">{description}</p>
             </div>
         </motion.article>
     );

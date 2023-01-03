@@ -18,20 +18,25 @@ const navigation = [
         link: "/malatrait_resume.pdf",
         isExternal: true,
     },
+    {
+        name: "LinkedIn",
+        link: "https://www.linkedin.com/in/hugomalatrait",
+        isExternal: true,
+    },
 ];
 
 export const Header = () => {
     return (
         <header>
-            <nav className="flex flex-row justify-between items-center mt-4">
-                <h1 className="text-white text-md font-bold uppercase">Hugo Malatrait</h1>
-                <div className="space-x-4">
+            <nav className="flex flex-row items-center justify-between mt-4">
+                <h1 className="font-bold text-white uppercase text-md">Hugo Malatrait</h1>
+                <div className="space-x-8">
                     {navigation.map((link, i) => (
                         <Link
                             href={link.link}
                             key={`link-${i}`}
                             target={link.isExternal ? "_blank" : "_self"}
-                            className="text-white text-sm font-semibold uppercase hover:opacity-50 transition-opacity duration-300"
+                            className="text-sm font-semibold text-white uppercase transition-opacity duration-300 hover:opacity-50"
                         >
                             {link.name}
                         </Link>
@@ -47,13 +52,13 @@ export const Header = () => {
                     delay: 0,
                     ease: "easeIn",
                 }}
-                className="text-white text-opacity-40 text-4xl lg:text-6xl font-semibold md:text-center mx-auto z-10 bg-clip-text bg-gradient-to-tl from-transparent to-white"
+                className="z-10 mx-auto text-4xl font-semibold text-white text-opacity-40 lg:text-6xl md:text-center bg-clip-text bg-gradient-to-tl from-transparent to-white"
                 >
                     Helping companies build,
                     <br className="hidden lg:block" /> launch and refine their product
                 </motion.h1>
                 <div
-                    className="w-full h-full text-white bg-grid absolute"
+                    className="absolute w-full h-full text-white bg-grid"
                     style={{
                         maskImage: "radial-gradient(circle at 50% 50%, #8C8CDB 0%, #00000000 90%)",
                         WebkitMaskImage: "radial-gradient(circle at 50% 50%, #8C8CDB 0%, #00000000 50%)",
