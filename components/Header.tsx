@@ -4,11 +4,6 @@ import { motion } from "framer-motion";
 
 const navigation = [
     {
-        name: "Twitter",
-        link: "https://twitter.com/fafif0x",
-        isExternal: true,
-    },
-    {
         name: "Github",
         link: "https://github.com/fafifox",
         isExternal: true,
@@ -23,12 +18,17 @@ const navigation = [
         link: "https://www.linkedin.com/in/hugomalatrait",
         isExternal: true,
     },
+    {
+        name: "Twitter",
+        link: "https://twitter.com/fafif0x",
+        isExternal: true,
+    },
 ];
 
 export const Header = () => {
     return (
         <header>
-            <nav className="flex flex-row items-center justify-between mt-4">
+            <nav className="flex flex-row flex-wrap items-center justify-center mt-4 space-y-8 md:justify-between ">
                 <h1 className="font-bold text-white uppercase text-md">Hugo Malatrait</h1>
                 <div className="space-x-8">
                     {navigation.map((link, i) => (
